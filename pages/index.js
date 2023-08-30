@@ -1,6 +1,6 @@
 //domain.com/
 import MeetupList from "@/components/meetups/MeetupList";
-import Layout from "@/components/layout/Layout";
+
 import city2 from "@/components/assets/city2.jpg";
 function HomePage() {
   const DUMMY_DATA = [
@@ -21,11 +21,6 @@ function HomePage() {
       description: "second meetup",
     },
   ];
-  return (
-    <Layout>
-      {" "}
-      <MeetupList meetups={DUMMY_DATA} />
-    </Layout>
-  );
+  return <MeetupList meetups={DUMMY_DATA} />;
 }
 export default HomePage;
