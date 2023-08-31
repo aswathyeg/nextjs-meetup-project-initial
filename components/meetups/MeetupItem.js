@@ -3,7 +3,10 @@ import classes from "./MeetupItem.module.css";
 import { useRouter } from "next/router";
 
 function MeetupItem(props) {
-  function handleClick() {}
+  const router = useRouter();
+  function handleClick() {
+    router.push("/" + props.id);
+  }
   return (
     <li className={classes.item}>
       <Card>
