@@ -19,7 +19,27 @@ const DUMMY_DATA = [
     description: "second meetup",
   },
 ];
-function HomePage() {
-  return <MeetupList meetups={DUMMY_DATA} />;
+function HomePage(props) {
+  return <MeetupList meetups={props.meetups} />;
 }
+export async function getStaticProps() {
+  //fetch data from API
+  return {
+    props: {
+      meetups: DUMMY_DATA,
+    },
+    revalidate: 1,
+  };
+}
+
+// export async function getServerSideProps(context) {
+//   const req = context.req;
+//   const res = context.res;
+//   return {
+//     props: {
+//       meetups: DUMMY_DATA,
+//     },
+//   };
+// }
+
 export default HomePage;
