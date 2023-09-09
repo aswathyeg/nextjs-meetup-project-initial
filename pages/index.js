@@ -1,7 +1,8 @@
 //domain.com/
 import { MongoClient } from "mongodb";
 import MeetupList from "@/components/meetups/MeetupList";
-
+import Head from "next/head";
+import { Fragment } from "react";
 // const DUMMY_DATA = [
 //   {
 //     id: "m1",
@@ -21,7 +22,19 @@ import MeetupList from "@/components/meetups/MeetupList";
 //   },
 // ];
 function HomePage(props) {
-  return <MeetupList meetups={props.meetups} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>React Meetup</title> {/* tab (of the page title)*/}
+        <meta
+          name="description"
+          content="Browse for a meetsup project in React"
+        />
+        {/*browse result*/}
+      </Head>
+      <MeetupList meetups={props.meetups} />
+    </Fragment>
+  );
 }
 export async function getStaticProps() {
   //fetch data from API
