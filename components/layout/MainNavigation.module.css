@@ -4,14 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #77002e;
+  background-color: rgb(241, 236, 236);
   padding: 0 10%;
+  
 }
 
 .logo {
-  font-size: 2rem;
-  color: white;
-  font-weight: bold;
+  font-size: 1.5rem;
+  color: #A46844;
+  /* font-weight: bold; */
+  font-family: 'DM Sans', sans-serif;
 }
 
 .header ul {
@@ -28,8 +30,9 @@
 
 .header a {
   text-decoration: none;
-  font-size: 1.5rem;
-  color: #fcb8d2;
+  /* font-size: 1.5rem; */
+  color: black;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .header a:hover,
