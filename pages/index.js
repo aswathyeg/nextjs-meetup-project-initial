@@ -25,7 +25,7 @@ function HomePage(props) {
   return (
     <Fragment>
       <Head>
-        <title>React Meetup</title> {/* tab (of the page title)*/}
+        <title>NextJs project</title> {/* tab (of the page title)*/}
         <meta
           name="description"
           content="Browse for a meetsup project in React"
